@@ -264,7 +264,7 @@ int reflect_once(bool** has_mirror,const int &W, const int &H)
         return 0;
     }
     struct position next = {next_x,next_y};
-    if(collinear(ORIGIN,LAST_INTERSEC,next)&&collinear(ORIGIN,PAIRED_IMAGE,IMAGE)) return 0;
+    if(collinear(ORIGIN,LAST_INTERSEC,next)) return 0;
     LAST_INTERSEC = next;
     mirror_image(rt);
     return 1;
